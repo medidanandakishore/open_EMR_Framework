@@ -1,6 +1,5 @@
 *** Settings ***
-Documentation      This suit file handles all the test case related to the
-...     valid credentials
+Documentation       bvcdsxaz
 Library     SeleniumLibrary
 
 *** Test Cases ***

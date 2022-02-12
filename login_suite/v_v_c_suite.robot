@@ -14,3 +14,4 @@ Verify Valid Credentials Test
     Click Element    xpath=//button[@type='submit']
     Title Should Be    OpenEMR
     Close Browser
+    

@@ -1,81 +1,332 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220212 10:13:36.013" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220212 10:47:00.404" rpa="false" schemaversion="2">
 <suite id="s1" name="V I C Suite" source="C:\Users\Praveen M\PycharmProjects\Robot_project\login_suite\v_i_c_suite.robot">
 <test id="s1-t1" name="TC1">
-<kw name="Launch Browser" type="SETUP">
-<msg timestamp="20220212 10:13:38.339" level="FAIL">No keyword with name 'Launch Browser' found.</msg>
-<status status="FAIL" starttime="20220212 10:13:38.339" endtime="20220212 10:13:38.339"/>
+<kw name="Launch Browser" library="common_functionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}/driver/geckodriver</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220212 10:47:04.680" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20220212 10:47:04.786" level="INFO">Firefox driver log is always forced to to: C:\Users\Praveen M\PycharmProjects\Robot_project\geckodriver-2.log</msg>
+<msg timestamp="20220212 10:49:24.122" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220212 10:49:27.507" level="FAIL">TimeoutException: Message: No connection could be made because the target machine actively refused it. (os error 10061)
+</msg>
+<status status="FAIL" starttime="20220212 10:47:04.680" endtime="20220212 10:49:27.507"/>
 </kw>
-<kw name="End Browser" type="TEARDOWN">
-<msg timestamp="20220212 10:13:38.348" level="FAIL">No keyword with name 'End Browser' found. Did you mean:
-    SeleniumLibrary.Open Browser</msg>
-<status status="FAIL" starttime="20220212 10:13:38.348" endtime="20220212 10:13:38.348">No keyword with name 'End Browser' found. Did you mean:
-    SeleniumLibrary.Open Browser</status>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220212 10:49:27.508" endtime="20220212 10:49:27.508"/>
 </kw>
-<status status="FAIL" starttime="20220212 10:13:38.326" endtime="20220212 10:13:38.349">Setup failed:
-No keyword with name 'Launch Browser' found.
-
-Also teardown failed:
-No keyword with name 'End Browser' found. Did you mean:
-    SeleniumLibrary.Open Browser</status>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20220212 10:49:27.508" endtime="20220212 10:49:27.508"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${EXECDIR}/screenshot</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="NOT RUN" starttime="20220212 10:49:27.508" endtime="20220212 10:49:27.508"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20220212 10:49:27.508" endtime="20220212 10:49:27.509"/>
+</kw>
+<status status="FAIL" starttime="20220212 10:47:04.679" endtime="20220212 10:49:27.509"/>
+</kw>
+<kw name="End Browser" library="common_functionality" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220212 10:49:27.511" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20220212 10:49:27.511" endtime="20220212 10:49:27.511"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220212 10:49:27.511" endtime="20220212 10:49:27.511"/>
+</kw>
+<status status="PASS" starttime="20220212 10:49:27.510" endtime="20220212 10:49:27.512"/>
+</kw>
+<status status="FAIL" starttime="20220212 10:47:04.678" endtime="20220212 10:49:27.513">Setup failed:
+TimeoutException: Message: No connection could be made because the target machine actively refused it. (os error 10061)
+</status>
 </test>
 <test id="s1-t2" name="TC2">
-<kw name="Launch Browser" type="SETUP">
-<msg timestamp="20220212 10:13:38.364" level="FAIL">No keyword with name 'Launch Browser' found.</msg>
-<status status="FAIL" starttime="20220212 10:13:38.363" endtime="20220212 10:13:38.364"/>
+<kw name="Launch Browser" library="common_functionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}/driver/geckodriver</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220212 10:49:27.652" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20220212 10:49:27.653" level="INFO">Firefox driver log is always forced to to: C:\Users\Praveen M\PycharmProjects\Robot_project\geckodriver-3.log</msg>
+<msg timestamp="20220212 10:50:26.241" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220212 10:50:26.245" level="FAIL">WebDriverException: Message: Process unexpectedly closed with status 0
+</msg>
+<status status="FAIL" starttime="20220212 10:49:27.651" endtime="20220212 10:50:26.246"/>
 </kw>
-<kw name="End Browser" type="TEARDOWN">
-<msg timestamp="20220212 10:13:38.374" level="FAIL">No keyword with name 'End Browser' found. Did you mean:
-    SeleniumLibrary.Open Browser</msg>
-<status status="FAIL" starttime="20220212 10:13:38.374" endtime="20220212 10:13:38.374">No keyword with name 'End Browser' found. Did you mean:
-    SeleniumLibrary.Open Browser</status>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220212 10:50:26.246" endtime="20220212 10:50:26.246"/>
 </kw>
-<status status="FAIL" starttime="20220212 10:13:38.354" endtime="20220212 10:13:38.375">Setup failed:
-No keyword with name 'Launch Browser' found.
-
-Also teardown failed:
-No keyword with name 'End Browser' found. Did you mean:
-    SeleniumLibrary.Open Browser</status>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20220212 10:50:26.246" endtime="20220212 10:50:26.246"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${EXECDIR}/screenshot</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="NOT RUN" starttime="20220212 10:50:26.246" endtime="20220212 10:50:26.247"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20220212 10:50:26.247" endtime="20220212 10:50:26.247"/>
+</kw>
+<status status="FAIL" starttime="20220212 10:49:27.650" endtime="20220212 10:50:26.247"/>
+</kw>
+<kw name="End Browser" library="common_functionality" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220212 10:50:26.382" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20220212 10:50:26.381" endtime="20220212 10:50:26.382"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220212 10:50:26.382" endtime="20220212 10:50:26.382"/>
+</kw>
+<status status="PASS" starttime="20220212 10:50:26.248" endtime="20220212 10:50:26.383"/>
+</kw>
+<status status="FAIL" starttime="20220212 10:49:27.649" endtime="20220212 10:50:26.384">Setup failed:
+WebDriverException: Message: Process unexpectedly closed with status 0
+</status>
 </test>
 <test id="s1-t3" name="TC3">
-<kw name="Launch Browser" type="SETUP">
-<msg timestamp="20220212 10:13:38.390" level="FAIL">No keyword with name 'Launch Browser' found.</msg>
-<status status="FAIL" starttime="20220212 10:13:38.390" endtime="20220212 10:13:38.390"/>
+<kw name="Launch Browser" library="common_functionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}/driver/geckodriver</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220212 10:50:26.391" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20220212 10:50:26.626" level="INFO">Firefox driver log is always forced to to: C:\Users\Praveen M\PycharmProjects\Robot_project\geckodriver-4.log</msg>
+<status status="PASS" starttime="20220212 10:50:26.389" endtime="20220212 10:50:56.624"/>
 </kw>
-<kw name="End Browser" type="TEARDOWN">
-<msg timestamp="20220212 10:13:38.400" level="FAIL">No keyword with name 'End Browser' found. Did you mean:
-    SeleniumLibrary.Open Browser</msg>
-<status status="FAIL" starttime="20220212 10:13:38.399" endtime="20220212 10:13:38.400">No keyword with name 'End Browser' found. Did you mean:
-    SeleniumLibrary.Open Browser</status>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220212 10:50:56.624" endtime="20220212 10:50:56.628"/>
 </kw>
-<status status="FAIL" starttime="20220212 10:13:38.380" endtime="20220212 10:13:38.400">Setup failed:
-No keyword with name 'Launch Browser' found.
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220212 10:50:56.628" endtime="20220212 10:50:56.632"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${EXECDIR}/screenshot</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220212 10:50:56.632" endtime="20220212 10:50:56.633"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220212 10:50:56.634" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<status status="PASS" starttime="20220212 10:50:56.633" endtime="20220212 10:52:01.099"/>
+</kw>
+<status status="PASS" starttime="20220212 10:50:26.388" endtime="20220212 10:52:01.099"/>
+</kw>
+<kw name="Verify Invalid Credential Template">
+<arg>${EMPTY}</arg>
+<arg>peter123</arg>
+<arg>Dutch</arg>
+<arg>Invalid username or password</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=authUser</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220212 10:52:02.435" level="INFO">Typing text '' into text field 'id=authUser'.</msg>
+<msg timestamp="20220212 10:52:10.244" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:181:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:415:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.takeScreenshot@chrome://remote/content/marionette/driver.js:2186:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:500:20
+</msg>
+<msg timestamp="20220212 10:52:13.081" level="FAIL">NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:181:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:415:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.findElements@chrome://remote/content/marionette/driver.js:1439:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:500:20
+</msg>
+<status status="FAIL" starttime="20220212 10:52:01.443" endtime="20220212 10:52:13.081"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=clearPass</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220212 10:52:13.081" endtime="20220212 10:52:13.081"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>name=languageChoice</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" starttime="20220212 10:52:13.082" endtime="20220212 10:52:13.082"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220212 10:52:13.082" endtime="20220212 10:52:13.082"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>//div[contains(text(),'Invalid')]</arg>
+<arg>${expected_error}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20220212 10:52:13.177" endtime="20220212 10:52:13.177"/>
+</kw>
+<status status="FAIL" starttime="20220212 10:52:01.157" endtime="20220212 10:52:13.324"/>
+</kw>
+<kw name="End Browser" library="common_functionality" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220212 10:52:18.687" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:181:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:415:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.takeScreenshot@chrome://remote/content/marionette/driver.js:2186:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:500:20
+</msg>
+<msg timestamp="20220212 10:52:19.061" level="FAIL">NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:181:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:415:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.takeScreenshot@chrome://remote/content/marionette/driver.js:2186:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:500:20
+</msg>
+<status status="FAIL" starttime="20220212 10:52:13.379" endtime="20220212 10:52:19.062"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220212 10:52:19.062" endtime="20220212 10:52:19.881"/>
+</kw>
+<status status="FAIL" starttime="20220212 10:52:13.378" endtime="20220212 10:52:19.881">NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:181:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:415:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.takeScreenshot@chrome://remote/content/marionette/driver.js:2186:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:500:20
+</status>
+</kw>
+<status status="FAIL" starttime="20220212 10:50:26.387" endtime="20220212 10:52:19.882">NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:181:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:415:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.findElements@chrome://remote/content/marionette/driver.js:1439:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:500:20
+
 
 Also teardown failed:
-No keyword with name 'End Browser' found. Did you mean:
-    SeleniumLibrary.Open Browser</status>
+NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:181:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:415:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.takeScreenshot@chrome://remote/content/marionette/driver.js:2186:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:500:20
+</status>
 </test>
 <test id="s1-t4" name="TC4">
-<kw name="Launch Browser" type="SETUP">
-<msg timestamp="20220212 10:13:38.417" level="FAIL">No keyword with name 'Launch Browser' found.</msg>
-<status status="FAIL" starttime="20220212 10:13:38.417" endtime="20220212 10:13:38.417"/>
+<kw name="Launch Browser" library="common_functionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}/driver/geckodriver</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220212 10:52:20.044" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20220212 10:52:20.045" level="INFO">Firefox driver log is always forced to to: C:\Users\Praveen M\PycharmProjects\Robot_project\geckodriver-5.log</msg>
+<msg timestamp="20220212 10:53:25.472" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220212 10:53:25.475" level="FAIL">TimeoutException: Message: No connection could be made because the target machine actively refused it. (os error 10061)
+</msg>
+<status status="FAIL" starttime="20220212 10:52:20.043" endtime="20220212 10:53:25.475"/>
 </kw>
-<kw name="End Browser" type="TEARDOWN">
-<msg timestamp="20220212 10:13:38.427" level="FAIL">No keyword with name 'End Browser' found. Did you mean:
-    SeleniumLibrary.Open Browser</msg>
-<status status="FAIL" starttime="20220212 10:13:38.426" endtime="20220212 10:13:38.427">No keyword with name 'End Browser' found. Did you mean:
-    SeleniumLibrary.Open Browser</status>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220212 10:53:25.476" endtime="20220212 10:53:25.476"/>
 </kw>
-<status status="FAIL" starttime="20220212 10:13:38.406" endtime="20220212 10:13:38.427">Setup failed:
-No keyword with name 'Launch Browser' found.
-
-Also teardown failed:
-No keyword with name 'End Browser' found. Did you mean:
-    SeleniumLibrary.Open Browser</status>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20220212 10:53:25.476" endtime="20220212 10:53:25.476"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${EXECDIR}/screenshot</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="NOT RUN" starttime="20220212 10:53:25.476" endtime="20220212 10:53:25.476"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20220212 10:53:25.476" endtime="20220212 10:53:25.476"/>
+</kw>
+<status status="FAIL" starttime="20220212 10:52:19.981" endtime="20220212 10:53:25.477"/>
+</kw>
+<kw name="End Browser" library="common_functionality" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220212 10:53:25.479" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20220212 10:53:25.479" endtime="20220212 10:53:25.488"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220212 10:53:25.488" endtime="20220212 10:53:25.488"/>
+</kw>
+<status status="PASS" starttime="20220212 10:53:25.478" endtime="20220212 10:53:25.488"/>
+</kw>
+<status status="FAIL" starttime="20220212 10:52:19.980" endtime="20220212 10:53:25.489">Setup failed:
+TimeoutException: Message: No connection could be made because the target machine actively refused it. (os error 10061)
+</status>
 </test>
 <doc>This suit file handles all the test case related to the
 invalid credentials</doc>
-<status status="FAIL" starttime="20220212 10:13:36.030" endtime="20220212 10:13:38.431"/>
+<status status="FAIL" starttime="20220212 10:47:00.439" endtime="20220212 10:53:25.641"/>
 </suite>
 <statistics>
 <total>
@@ -88,9 +339,31 @@ invalid credentials</doc>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220212 10:13:38.318" level="ERROR">Error in file 'C:\Users\Praveen M\PycharmProjects\Robot_project\base\common_functionality.resource' on line 10: Setting 'Test Setup' is not allowed in resource file.</msg>
-<msg timestamp="20220212 10:13:38.319" level="ERROR">Error in file 'C:\Users\Praveen M\PycharmProjects\Robot_project\base\common_functionality.resource' on line 11: Setting 'Test Teardown' is not allowed in resource file.</msg>
-<msg timestamp="20220212 10:13:38.320" level="ERROR">Error in file 'C:\Users\Praveen M\PycharmProjects\Robot_project\base\common_functionality.resource' on line 13: Setting 'Test Template' is not allowed in resource file.</msg>
-<msg timestamp="20220212 10:13:38.321" level="ERROR">Error in file 'C:\Users\Praveen M\PycharmProjects\Robot_project\login_suite\v_i_c_suite.robot' on line 5: Error in file 'C:\Users\Praveen M\PycharmProjects\Robot_project\base\common_functionality.resource' on line 15: Resource file with 'Test Cases' section is invalid.</msg>
+<msg timestamp="20220212 10:52:10.244" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:181:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:415:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.takeScreenshot@chrome://remote/content/marionette/driver.js:2186:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:500:20
+</msg>
+<msg timestamp="20220212 10:52:18.687" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:181:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:415:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:435:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:143:4
+GeckoDriver.prototype.takeScreenshot@chrome://remote/content/marionette/driver.js:2186:10
+despatch@chrome://remote/content/marionette/server.js:306:40
+execute@chrome://remote/content/marionette/server.js:279:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:252:20
+onPacket@chrome://remote/content/marionette/server.js:253:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:500:20
+</msg>
 </errors>
 </robot>

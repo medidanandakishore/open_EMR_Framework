@@ -1,26 +1,19 @@
 *** Settings ***
-Documentation      This suit file handles all the test case related to the
-...     valid credentials
-Library     SeleniumLibrary
-Resource    ../base/common_functionality.resource
+Documentation   This file contains reusable keywords
 
 Library     SeleniumLibrary
-Resource    ../base/common_functionality.resource
-
-Test Setup     Launch Browser
-Test Teardown   End Browser
-
-Test Template   Verify Valid Credentials Template
-
-*** Test Cases ***
-TC1     admin      pass     English (Indian)        OpenEMR
-TC2     physician       physician       English (Indian)        OpenEMR
+*** Variables ***
+${BROWSER_NAME}     firefox
+${URL}      https://demo.openemr.io/b/openemr
 
 *** Keywords ***
-Verify Valid Credentials Template
-    [Arguments]     ${username}     ${password}     ${language}     ${expected_title}
-    Input Text    id=authUser    ${username}
-    Input Password    id=clearPass    ${password}
-    Select From List By Label    name=languageChoice    ${language}
-    Click Element    xpath=//button[@type='submit']
-    Title Should Be    ${expected_title}
+Launch Browser
+    Open Browser      browser=${BROWSER_NAME}     executable_path=${EXECDIR}/driver/geckodriver
+    Maximize Browser Window
+    Set Selenium Implicit Wait    30s
+    Set Screenshot Directory    ${EXECDIR}/screenshot
+    Go To    url=${URL}
+
+End Browser
+    Capture Page Screenshot
+    Close Browser
